@@ -9,8 +9,7 @@ export default function ProfileView() {
 
   useEffect(() => {
     const fetchProfile = async () => {
-      const token = localStorage.getItem("token"); // ✅ Get token from localStorage
-
+      const token = localStorage.getItem("token"); 
       if (!token) {
         alert("Not logged in. Redirecting...");
         navigate("/login");

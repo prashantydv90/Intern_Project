@@ -8,7 +8,7 @@ const userSchema = new mongoose.Schema({
   company: { type: String },
   isAgency: { type: Boolean, default: false },
 }, {
-  timestamps: true // ✅ Automatically adds createdAt and updatedAt
+  timestamps: true 
 });
 
 module.exports = mongoose.model("User", userSchema);
