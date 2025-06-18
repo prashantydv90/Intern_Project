@@ -2,7 +2,7 @@ const express = require("express");
 const cors = require("cors");
 const dotenv = require("dotenv");
 const connectDB = require("./config/db");
-const router = require("./app/routes/authroutes");
+const router=require("./app/routes/authRoutes")
 
 dotenv.config();
 const app = express();
@@ -13,9 +13,7 @@ app.use(cors({
   credentials: true, // 🔥 This is required for cookies/tokens with frontend
 }));
 app.use(express.json());
-
-// Routes
-app.use("/api", router);
+app.use("/api",router);
 
 
 // Connect DB and Start Server
