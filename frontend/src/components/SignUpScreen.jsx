@@ -21,7 +21,7 @@ export default function SignupScreen() {
     e.preventDefault();
     try {
       const payload = { ...formData, isAgency: isAgency === "yes" };
-      const res = await axios.post("http://localhost:5000/api/register", payload,{withCredentials:true});
+      const res = await axios.post("https://intern-project-backend-4ug0.onrender.com/api/register", payload,{withCredentials:true});
       console.log("User registered:", res.data);
       alert("Registration successful");
       navigate("/login");

@@ -18,7 +18,7 @@ export default function LoginScreen() {
     e.preventDefault(); // prevent page refresh
 
     try {
-      const res = await axios.post("http://localhost:5000/api/login", loginData);
+      const res = await axios.post("https://intern-project-backend-4ug0.onrender.com/api/login", loginData);
       const token = res.data.token;
       if (token) {
         localStorage.setItem("token", token);

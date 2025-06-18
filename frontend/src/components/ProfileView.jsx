@@ -18,7 +18,7 @@ export default function ProfileView() {
       }
 
       try {
-        const res = await axios.get("http://localhost:5000/api/profile", {
+        const res = await axios.get("https://intern-project-backend-4ug0.onrender.com/api/profile", {
           headers: {
              Authorization: `Bearer ${token}`, // ✅ Send token in header
           },
@@ -37,7 +37,7 @@ export default function ProfileView() {
 
   const handleLogout = async () => {
   try {
-    await axios.post("http://localhost:5000/api/logout", {}, {
+    await axios.post("https://intern-project-backend-4ug0.onrender.com/api/logout", {}, {
       withCredentials: true, // if you're using cookies
     });
     localStorage.removeItem("token"); // or remove cookie if stored differently
